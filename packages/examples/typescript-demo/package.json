@@ -1,0 +1,19 @@
+{
+  "name": "typescript-demo",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "host-simple",
+    "remote-simple"
+  ],
+  "scripts": {
+    "build": "pnpm run build -r --filter ./",
+    "serve": "pnpm run serve --parallel --filter ./",
+    "stop": "kill-port --port 5000,5001"
+  },
+  "devDependencies": {
+    "@originjs/vite-plugin-federation": "workspace:*",
+    "kill-port": "^1.6.1"
+  },
+  "license": "MulanPSL-2.0"
+}
